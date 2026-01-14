@@ -16,11 +16,12 @@ export function CountdownTimer() {
 
   useEffect(() => {
     setMounted(true)
-    const targetDate = new Date("2025-01-30T16:00:00-03:00").getTime()
+    const targetDate = new Date("2025-01-30T16:00:00").getTime()
 
     const calculateTimeLeft = () => {
       const now = new Date().getTime()
       const difference = targetDate - now
+      console.log("[v0] Countdown - Now:", new Date(now), "Target:", new Date(targetDate), "Diff:", difference)
 
       if (difference > 0) {
         setTimeLeft({
@@ -46,7 +47,7 @@ export function CountdownTimer() {
         <div className="grid grid-cols-4 gap-4">
           {["Días", "Horas", "Min", "Seg"].map((label) => (
             <div key={label} className="text-center">
-              <div className="text-4xl md:text-6xl font-mono text-primary font-bold">--</div>
+              <div className="text-4xl md:text-6xl text-primary font-extrabold">--</div>
               <div className="text-xs md:text-sm text-muted-foreground uppercase tracking-wider mt-2">{label}</div>
             </div>
           ))}
@@ -67,10 +68,12 @@ export function CountdownTimer() {
       <div className="grid grid-cols-4 gap-4">
         {timeUnits.map(({ label, value }) => (
           <div key={label} className="text-center">
-            <div className="text-4xl md:text-6xl font-mono text-primary font-bold tabular-nums">
+            <div className="text-4xl md:text-6xl text-primary font-extrabold tabular-nums">
               {String(value).padStart(2, "0")}
             </div>
-            <div className="text-xs md:text-sm text-muted-foreground uppercase tracking-wider mt-2">{label}</div>
+            <div className="text-xs md:text-sm text-muted-foreground uppercase tracking-wider mt-2 font-semibold">
+              {label}
+            </div>
           </div>
         ))}
       </div>

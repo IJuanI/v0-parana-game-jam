@@ -2,31 +2,41 @@ import { HudFrame } from "./hud-frame"
 import { SponsorLogo } from "./sponsor-logo"
 
 const goldSponsors = [
+  {
+    name: "Global Game Jam",
+    logo: "/images/ggj.png",
+    placeholder: "Global Game Jam",
+  },
   { name: "ERGD - Entre Ríos GameDevs", logo: "/ergd-gaming-community-logo.jpg", placeholder: "REEMPLAZAR: Logo ERGD" },
-  { name: "Gobierno de Entre Ríos", logo: "/government-institution-logo.jpg", placeholder: "REEMPLAZAR: Logo Gob. ER" },
+  { name: "Gobierno de Entre Ríos", logo: "/government-entre-rios-logo.jpg", placeholder: "REEMPLAZAR: Logo Gob. ER" },
 ]
 
 const silverSponsors = [
-  { name: "Polo Tecnológico del Paraná", logo: "/technology-hub-logo.jpg", placeholder: "REEMPLAZAR: Logo Polo Tec" },
-  { name: "FCyT - UADER", logo: "/university-faculty-logo.jpg", placeholder: "REEMPLAZAR: Logo FCyT" },
-  { name: "Mirador TEC", logo: "/tech-venue-logo.jpg", placeholder: "REEMPLAZAR: Logo Mirador" },
+  { name: "Polo Tecnológico del Paraná", logo: "/polo-tecnologico-parana-logo.jpg", placeholder: "REEMPLAZAR: Logo Polo Tec" },
+  { name: "FCyT - UADER", logo: "/fcyt-uader-university-logo.jpg", placeholder: "REEMPLAZAR: Logo FCyT" },
+  {
+    name: "Mirador TEC",
+    logo: "/images/mirador-20tec-20out-20white.png",
+    placeholder: "Mirador TEC",
+  },
 ]
 
 const bronzeSponsors = [
-  { name: "Sponsor Bronce 1", logo: "/abstract-tech-logo-1.png", placeholder: "REEMPLAZAR: Logo sponsor 1" },
-  { name: "Sponsor Bronce 2", logo: "/gaming-company-logo.png", placeholder: "REEMPLAZAR: Logo sponsor 2" },
-  { name: "Sponsor Bronce 3", logo: "/software-company-logo.png", placeholder: "REEMPLAZAR: Logo sponsor 3" },
+  { name: "Sponsor Bronce 1", logo: "/tech-sponsor-logo-1.jpg", placeholder: "REEMPLAZAR: Logo sponsor 1" },
+  { name: "Sponsor Bronce 2", logo: "/gaming-sponsor-logo-2.jpg", placeholder: "REEMPLAZAR: Logo sponsor 2" },
+  { name: "Sponsor Bronce 3", logo: "/software-sponsor-logo-3.jpg", placeholder: "REEMPLAZAR: Logo sponsor 3" },
 ]
 
 export function SponsorsSection() {
   return (
-    <section id="sponsors" className="py-20 px-4">
+    <section id="sponsors" className="py-20 px-4 hex-pattern">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="text-primary">Sponsors</span> <span className="text-foreground">& Colaboradores</span>
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
+            <span className="text-secondary text-glow-purple">Sponsors</span>{" "}
+            <span className="text-foreground">& Colaboradores</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto font-[family-name:var(--font-inter)]">
             Gracias a las organizaciones e instituciones que hacen posible este evento.
           </p>
         </div>

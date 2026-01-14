@@ -1,5 +1,6 @@
 import { HudFrame } from "./hud-frame"
 import { Gamepad2, Users, Clock, Trophy } from "lucide-react"
+import Image from "next/image"
 
 const features = [
   {
@@ -26,13 +27,29 @@ const features = [
 
 export function AboutSection() {
   return (
-    <section className="py-20 px-4 hud-grid">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-20 px-4 hud-grid relative">
+      {/* Gaming decorative elements */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute -top-10 -right-10 w-40 h-40 border-2 border-secondary/10 rounded-full" />
+        <div className="absolute -bottom-20 -left-20 w-60 h-60 border-2 border-primary/10 rounded-full" />
+      </div>
+
+      <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="text-primary">¿Qué es</span> <span className="text-foreground">la Game Jam?</span>
+          <div className="flex justify-center mb-4">
+            <Image
+              src="/images/ggj.png"
+              alt="Global Game Jam"
+              width={80}
+              height={53}
+              className="h-12 w-auto opacity-80"
+            />
+          </div>
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
+            <span className="text-primary text-glow-green">¿Qué es</span>{" "}
+            <span className="text-foreground">la Game Jam?</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto font-[family-name:var(--font-inter)]">
             La Global Game Jam es el evento de creación de videojuegos más grande del mundo. Durante un fin de semana,
             participantes de todo el planeta desarrollan juegos basados en un tema sorpresa revelado al inicio del
             evento.
@@ -41,12 +58,14 @@ export function AboutSection() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
-            <HudFrame key={index} className="text-center hover:border-primary/50 transition-all duration-300">
-              <div className="w-12 h-12 mx-auto mb-4 rounded-lg bg-primary/10 flex items-center justify-center">
-                <feature.icon className="w-6 h-6 text-primary" />
+            <HudFrame key={index} className="text-center hover:border-primary/50 transition-all duration-300 group">
+              <div className="w-14 h-14 mx-auto mb-4 rounded-lg bg-secondary/20 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                <feature.icon className="w-7 h-7 text-secondary group-hover:text-primary transition-colors" />
               </div>
-              <h3 className="text-foreground font-semibold mb-2">{feature.title}</h3>
-              <p className="text-muted-foreground text-sm">{feature.description}</p>
+              <h3 className="text-foreground font-bold mb-2">{feature.title}</h3>
+              <p className="text-muted-foreground text-sm font-[family-name:var(--font-inter)]">
+                {feature.description}
+              </p>
             </HudFrame>
           ))}
         </div>

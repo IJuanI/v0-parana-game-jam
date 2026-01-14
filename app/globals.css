@@ -3,81 +3,89 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Updated color palette with exact event colors */
 :root {
-  /* Sci-fi HUD Theme - Dark navy with mint green and purple accents */
-  --background: oklch(0.13 0.02 260);
-  --foreground: oklch(0.95 0 0);
-  --card: oklch(0.16 0.025 260);
-  --card-foreground: oklch(0.95 0 0);
-  --popover: oklch(0.16 0.025 260);
-  --popover-foreground: oklch(0.95 0 0);
-  --primary: oklch(0.8 0.18 155); /* Mint green */
-  --primary-foreground: oklch(0.13 0.02 260);
-  --secondary: oklch(0.65 0.2 290); /* Purple */
-  --secondary-foreground: oklch(0.98 0 0);
-  --muted: oklch(0.22 0.02 260);
-  --muted-foreground: oklch(0.7 0 0);
-  --accent: oklch(0.65 0.2 290);
-  --accent-foreground: oklch(0.98 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.3 0.04 260);
-  --input: oklch(0.22 0.02 260);
-  --ring: oklch(0.8 0.18 155);
-  --chart-1: oklch(0.8 0.18 155);
-  --chart-2: oklch(0.65 0.2 290);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
+  /* Event Color Palette */
+  --background: #0b1020; /* BG */
+  --foreground: #ffffff; /* W1 */
+  --card: #12182d;
+  --card-foreground: #ffffff;
+  --popover: #12182d;
+  --popover-foreground: #ffffff;
+  --primary: #3cff9e; /* G1 - Primary Green */
+  --primary-foreground: #0b1020;
+  --secondary: #8b6cff; /* P1 - Primary Purple */
+  --secondary-foreground: #ffffff;
+  --muted: #1a2140;
+  --muted-foreground: #b6c2ff; /* W2 */
+  --accent: #7d51fb; /* P2 */
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #2a3660;
+  --input: #1a2140;
+  --ring: #3cff9e;
+
+  /* Extended Event Colors */
+  --green-secondary: #1ecf7a; /* G2 */
+  --purple-dark: #5a34d6; /* P3 */
+
+  --chart-1: #3cff9e;
+  --chart-2: #8b6cff;
+  --chart-3: #7d51fb;
+  --chart-4: #5a34d6;
+  --chart-5: #1ecf7a;
   --radius: 0.5rem;
-  --sidebar: oklch(0.16 0.025 260);
-  --sidebar-foreground: oklch(0.95 0 0);
-  --sidebar-primary: oklch(0.8 0.18 155);
-  --sidebar-primary-foreground: oklch(0.13 0.02 260);
-  --sidebar-accent: oklch(0.22 0.02 260);
-  --sidebar-accent-foreground: oklch(0.95 0 0);
-  --sidebar-border: oklch(0.3 0.04 260);
-  --sidebar-ring: oklch(0.8 0.18 155);
+  --sidebar: #12182d;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #3cff9e;
+  --sidebar-primary-foreground: #0b1020;
+  --sidebar-accent: #1a2140;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #2a3660;
+  --sidebar-ring: #3cff9e;
 }
 
 .dark {
-  --background: oklch(0.13 0.02 260);
-  --foreground: oklch(0.95 0 0);
-  --card: oklch(0.16 0.025 260);
-  --card-foreground: oklch(0.95 0 0);
-  --popover: oklch(0.16 0.025 260);
-  --popover-foreground: oklch(0.95 0 0);
-  --primary: oklch(0.8 0.18 155);
-  --primary-foreground: oklch(0.13 0.02 260);
-  --secondary: oklch(0.65 0.2 290);
-  --secondary-foreground: oklch(0.98 0 0);
-  --muted: oklch(0.22 0.02 260);
-  --muted-foreground: oklch(0.7 0 0);
-  --accent: oklch(0.65 0.2 290);
-  --accent-foreground: oklch(0.98 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.3 0.04 260);
-  --input: oklch(0.22 0.02 260);
-  --ring: oklch(0.8 0.18 155);
-  --chart-1: oklch(0.8 0.18 155);
-  --chart-2: oklch(0.65 0.2 290);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.16 0.025 260);
-  --sidebar-foreground: oklch(0.95 0 0);
-  --sidebar-primary: oklch(0.8 0.18 155);
-  --sidebar-primary-foreground: oklch(0.13 0.02 260);
-  --sidebar-accent: oklch(0.22 0.02 260);
-  --sidebar-accent-foreground: oklch(0.95 0 0);
-  --sidebar-border: oklch(0.3 0.04 260);
-  --sidebar-ring: oklch(0.8 0.18 155);
+  --background: #0b1020;
+  --foreground: #ffffff;
+  --card: #12182d;
+  --card-foreground: #ffffff;
+  --popover: #12182d;
+  --popover-foreground: #ffffff;
+  --primary: #3cff9e;
+  --primary-foreground: #0b1020;
+  --secondary: #8b6cff;
+  --secondary-foreground: #ffffff;
+  --muted: #1a2140;
+  --muted-foreground: #b6c2ff;
+  --accent: #7d51fb;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #2a3660;
+  --input: #1a2140;
+  --ring: #3cff9e;
+  --chart-1: #3cff9e;
+  --chart-2: #8b6cff;
+  --chart-3: #7d51fb;
+  --chart-4: #5a34d6;
+  --chart-5: #1ecf7a;
+  --sidebar: #12182d;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #3cff9e;
+  --sidebar-primary-foreground: #0b1020;
+  --sidebar-accent: #1a2140;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #2a3660;
+  --sidebar-ring: #3cff9e;
 }
 
+/* Updated fonts to Oxanium and Inter */
 @theme inline {
-  --font-sans: "Orbitron", "Geist", "Geist Fallback";
-  --font-mono: "JetBrains Mono", "Geist Mono", "Geist Mono Fallback";
+  --font-sans: "Oxanium", "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "Oxanium", monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -125,17 +133,18 @@
   }
 }
 
-/* Sci-fi Grid Background */
+/* Updated grid colors to match event palette */
 .hud-grid {
-  background-image: linear-gradient(rgba(74, 222, 128, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(74, 222, 128, 0.03) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(60, 255, 158, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(60, 255, 158, 0.03) 1px, transparent 1px);
   background-size: 50px 50px;
 }
 
-/* Glowing border effect */
+/* Glowing border effect with event colors */
 .hud-border {
-  box-shadow: 0 0 0 1px rgba(74, 222, 128, 0.3), 0 0 20px rgba(74, 222, 128, 0.1), inset 0 0 20px
-    rgba(74, 222, 128, 0.05);
+  /* Reduce aggressive glow to be more subtle */
+  box-shadow: 0 0 0 1px rgba(139, 108, 255, 0.2), 0 0 10px rgba(139, 108, 255, 0.08), inset 0 0 10px
+    rgba(139, 108, 255, 0.02);
 }
 
 /* Animated scan line */
@@ -155,18 +164,18 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(74, 222, 128, 0.5), transparent);
+  background: linear-gradient(90deg, transparent, rgba(60, 255, 158, 0.5), transparent);
   animation: scanline 8s linear infinite;
 }
 
-/* Corner decorations */
+/* Corner decorations with event colors */
 .hud-corner::before,
 .hud-corner::after {
   content: "";
   position: absolute;
   width: 20px;
   height: 20px;
-  border: 2px solid rgba(74, 222, 128, 0.5);
+  border: 2px solid rgba(139, 108, 255, 0.5);
 }
 
 .hud-corner::before {
@@ -181,4 +190,49 @@
   right: -1px;
   border-left: none;
   border-top: none;
+}
+
+/* Added gaming-style animations */
+@keyframes pulse-glow {
+  0%,
+  100% {
+    /* Reduce glow intensity */
+    box-shadow: 0 0 5px rgba(60, 255, 158, 0.3), 0 0 10px rgba(60, 255, 158, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(60, 255, 158, 0.5), 0 0 20px rgba(60, 255, 158, 0.25);
+  }
+}
+
+.glow-pulse {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Gaming-style text glow */
+.text-glow-green {
+  /* Reduce text glow intensity */
+  text-shadow: 0 0 8px rgba(60, 255, 158, 0.3), 0 0 16px rgba(60, 255, 158, 0.15);
+}
+
+.text-glow-purple {
+  text-shadow: 0 0 8px rgba(139, 108, 255, 0.3), 0 0 16px rgba(139, 108, 255, 0.15);
+}
+
+/* Hexagon pattern background */
+.hex-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%238b6cff' fill-opacity='0.03'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }

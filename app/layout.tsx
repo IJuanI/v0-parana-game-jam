@@ -1,11 +1,18 @@
 import type React from "react"
 import type { Metadata, Viewport } from "next"
-import { Orbitron, JetBrains_Mono } from "next/font/google"
+import { Oxanium, Inter } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
-const orbitron = Orbitron({ subsets: ["latin"], variable: "--font-orbitron" })
-const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains" })
+const oxanium = Oxanium({
+  subsets: ["latin"],
+  variable: "--font-oxanium",
+  weight: ["400", "500", "600", "700", "800"],
+})
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+})
 
 export const metadata: Metadata = {
   title: "Paraná Game Jam 2025 | Global Game Jam",
@@ -18,11 +25,11 @@ export const metadata: Metadata = {
     locale: "es_AR",
     type: "website",
   },
-    generator: 'v0.app'
+  generator: "v0.app",
 }
 
 export const viewport: Viewport = {
-  themeColor: "#0f172a",
+  themeColor: "#0b1020",
   width: "device-width",
   initialScale: 1,
 }
@@ -34,7 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${orbitron.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
+      <body className={`${oxanium.variable} ${inter.variable} font-sans antialiased`}>
         {children}
         <Analytics />
       </body>
