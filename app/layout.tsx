@@ -1,0 +1,43 @@
+import type React from "react"
+import type { Metadata, Viewport } from "next"
+import { Orbitron, JetBrains_Mono } from "next/font/google"
+import { Analytics } from "@vercel/analytics/next"
+import "./globals.css"
+
+const orbitron = Orbitron({ subsets: ["latin"], variable: "--font-orbitron" })
+const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains" })
+
+export const metadata: Metadata = {
+  title: "Paraná Game Jam 2025 | Global Game Jam",
+  description:
+    "Únete a la Paraná Game Jam 2025, parte del Global Game Jam. Del 30 de enero al 1 de febrero en Mirador TEC, Paraná. ¡Crea videojuegos en 48 horas!",
+  keywords: ["game jam", "paraná", "global game jam", "videojuegos", "desarrollo de juegos", "entre ríos"],
+  openGraph: {
+    title: "Paraná Game Jam 2025",
+    description: "Crea videojuegos en 48 horas. Del 30 de enero al 1 de febrero.",
+    locale: "es_AR",
+    type: "website",
+  },
+    generator: 'v0.app'
+}
+
+export const viewport: Viewport = {
+  themeColor: "#0f172a",
+  width: "device-width",
+  initialScale: 1,
+}
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
+  return (
+    <html lang="es">
+      <body className={`${orbitron.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
+        {children}
+        <Analytics />
+      </body>
+    </html>
+  )
+}
