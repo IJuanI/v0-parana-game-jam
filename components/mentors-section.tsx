@@ -17,6 +17,13 @@ const mentors = [
   },
   {
     name: "Nombre del Mentor",
+    role: "Programador",
+    specialty: "Godot / Unreal",
+    image: "/professional-programmer.png",
+    placeholder: "REEMPLAZAR: Foto mentor 2",
+  },
+  {
+    name: "Nombre del Mentor",
     role: "Artista 2D/3D",
     specialty: "Arte conceptual",
     image: "/professional-digital-artist-portrait.jpg",
@@ -31,13 +38,6 @@ const mentors = [
   },
   {
     name: "Nombre del Mentor",
-    role: "Productor",
-    specialty: "Gestión de proyectos",
-    image: "/professional-project-manager.png",
-    placeholder: "REEMPLAZAR: Foto mentor 5",
-  },
-  {
-    name: "Nombre del Mentor",
     role: "Narrativa",
     specialty: "Storytelling interactivo",
     image: "/professional-writer-portrait.png",
@@ -47,7 +47,7 @@ const mentors = [
 
 export function MentorsSection() {
   return (
-    <section id="mentores" className="py-20 px-4 bg-card/30">
+    <section id="mentores" className="hud-grid hex-pattern py-20 px-4 bg-card/30">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">

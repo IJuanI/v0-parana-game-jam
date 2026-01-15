@@ -16,7 +16,7 @@ export function CountdownTimer() {
 
   useEffect(() => {
     setMounted(true)
-    const targetDate = new Date("2025-01-30T16:00:00").getTime()
+    const targetDate = new Date("2026-01-30T16:00:00-03:00").getTime()
 
     const calculateTimeLeft = () => {
       const now = new Date().getTime()

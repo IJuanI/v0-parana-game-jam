@@ -42,7 +42,7 @@ export function HeroSection() {
         {/* Global Game Jam Badge */}
         <div className="inline-flex items-center gap-2 bg-card/50 backdrop-blur-sm border border-secondary/30 rounded-full px-4 py-2 mb-6">
           <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-          <span className="text-sm text-muted-foreground font-medium">Global Game Jam 2025 - Sede Paraná</span>
+          <span className="text-sm text-muted-foreground font-medium">Global Game Jam 2026 - Sede Paraná</span>
         </div>
 
         {/* Main Title - Text based with glowing effect */}
@@ -63,15 +63,15 @@ export function HeroSection() {
         </div>
 
         {/* Event Time & Location - with Mirador TEC logo */}
-        <div className="flex flex-wrap items-center justify-center gap-4 mb-8">
+        <a href="https://miradortec.net.ar/" className="flex flex-wrap items-center justify-center gap-4 mb-8">
           <div className="bg-secondary/20 border border-secondary/30 rounded px-4 py-2">
-            <span className="text-secondary font-bold text-sm">INICIO 16 HS • CIERRE 19 HS</span>
+            <span className="text-secondary font-bold">INICIO 16 HS • CIERRE 19 HS</span>
           </div>
           <div className="flex items-center justify-center gap-2 bg-card/50 border border-primary/30 rounded px-4 py-2">
-            <span className="font-bold text-sm text-muted-foreground">LUGAR:</span>
+            <span className="font-bold text-muted-foreground mt-1">LUGAR:</span>
             <div className="flex items-center justify-center">
               <Image
-                src="/images/mirador-20tec-20out-20white.png"
+                src="/images/mirador-tec.png"
                 alt="Mirador TEC"
                 width={100}
                 height={24}
@@ -79,12 +79,12 @@ export function HeroSection() {
               />
             </div>
           </div>
-        </div>
+        </a>
 
         {/* Description */}
         <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto mb-10 leading-relaxed font-[family-name:var(--font-inter)]">
           Únete a la experiencia más grande de desarrollo de videojuegos del mundo. 48 horas para crear, colaborar y dar
-          vida a tu juego. Sin importar tu experiencia, hay un lugar para vos en la comunidad gamer de Paraná.
+          vida a tu juego. Sin importar tu experiencia, hay un lugar para vos.
         </p>
 
         {/* CTA Buttons */}
@@ -94,7 +94,7 @@ export function HeroSection() {
             size="lg"
             className="bg-primary text-primary-foreground hover:bg-[#1ecf7a] uppercase tracking-wider px-8 font-bold glow-pulse"
           >
-            <a href="https://globalgamejam.org" target="_blank" rel="noopener noreferrer">
+            <a href="https://forms.gle/T2fBkjApbVzQFzgZ9" target="_blank" rel="noopener noreferrer">
               Registrarse Ahora
             </a>
           </Button>

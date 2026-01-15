@@ -9,7 +9,7 @@ export function Footer() {
           <div className="flex items-center gap-4">
             <Image src="/images/logo.png" alt="Paraná Game Jam" width={120} height={40} className="h-8 w-auto" />
             <span className="text-muted-foreground text-sm">|</span>
-            <span className="text-muted-foreground text-sm font-mono">Global Game Jam 2025</span>
+            <span className="text-muted-foreground text-sm font-mono">Global Game Jam 2026</span>
           </div>
 
           <div className="flex items-center gap-6 text-sm">
@@ -27,7 +27,7 @@ export function Footer() {
           </div>
 
           <p className="text-muted-foreground text-xs font-mono">
-            © 2025 Paraná Game Jam. Todos los derechos reservados.
+            © 2026 Paraná Game Jam.
           </p>
         </div>
       </div>

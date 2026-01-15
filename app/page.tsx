@@ -15,7 +15,7 @@ export default function Home() {
       <AboutSection />
 
       {/* Timeline Section */}
-      <section id="cronograma" className="py-20 px-4">
+      <section id="cronograma" className="hud-grid hex-pattern py-20 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">

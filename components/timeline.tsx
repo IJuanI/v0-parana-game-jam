@@ -4,30 +4,42 @@ const events = [
   {
     date: "30 ENE",
     time: "16:00",
+    title: "Disertación de estudio de videojuegos local",
+    description: "",
+  },
+  {
+    date: "30 ENE",
+    time: "16:30",
     title: "Apertura & Keynote",
     description: "Inicio del evento, presentación del tema y formación de equipos",
   },
   {
     date: "30 ENE",
+    time: "17:00 - 18:00",
+    title: "Brainstorming",
+    description: "Cada equipo define la idea de su juego",
+  },
+  {
+    date: "30 ENE",
     time: "18:00",
-    title: "Comienzo del Desarrollo",
-    description: "Los equipos comienzan a trabajar en sus proyectos",
+    title: "Presentación de Equipos",
+    description: "Un representante de cada equipo presenta su idea y equipo",
   },
   {
     date: "31 ENE",
     time: "Todo el día",
     title: "Jornada de Desarrollo",
-    description: "Desarrollo continuo con mentorías y talleres",
+    description: "Desarrollo continuo, con mentores a disposición",
+  },
+  {
+    date: "01 FEB",
+    time: "16:00",
+    title: "Entrega de Proyectos",
+    description: "Fecha límite para subir los juegos a la plataforma",
   },
   {
     date: "01 FEB",
     time: "17:00",
-    title: "Entrega de Proyectos",
-    description: "Deadline para subir los juegos a la plataforma",
-  },
-  {
-    date: "01 FEB",
-    time: "19:00",
     title: "Presentaciones & Cierre",
     description: "Demos de los juegos y ceremonia de clausura",
   },
@@ -43,7 +55,7 @@ export function Timeline() {
         <div className="space-y-8">
           {events.map((event, index) => (
             <div key={index} className="flex gap-4 md:gap-8 relative">
-              <div className="w-16 md:w-24 flex-shrink-0 text-right">
+              <div className="w-16 md:w-24 flex-shrink-0 text-right pr-2">
                 <div className="text-primary font-mono text-sm md:text-base font-bold">{event.date}</div>
                 <div className="text-muted-foreground text-xs md:text-sm font-mono">{event.time}</div>
               </div>

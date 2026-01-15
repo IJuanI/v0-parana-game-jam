@@ -9,27 +9,20 @@ const goldSponsors = [
   },
   { name: "ERGD - Entre Ríos GameDevs", logo: "/ergd-gaming-community-logo.jpg", placeholder: "REEMPLAZAR: Logo ERGD" },
   { name: "Gobierno de Entre Ríos", logo: "/government-entre-rios-logo.jpg", placeholder: "REEMPLAZAR: Logo Gob. ER" },
-]
-
-const silverSponsors = [
   { name: "Polo Tecnológico del Paraná", logo: "/polo-tecnologico-parana-logo.jpg", placeholder: "REEMPLAZAR: Logo Polo Tec" },
   { name: "FCyT - UADER", logo: "/fcyt-uader-university-logo.jpg", placeholder: "REEMPLAZAR: Logo FCyT" },
   {
     name: "Mirador TEC",
-    logo: "/images/mirador-20tec-20out-20white.png",
+    logo: "/images/mirador-tec.png",
     placeholder: "Mirador TEC",
   },
 ]
 
-const bronzeSponsors = [
-  { name: "Sponsor Bronce 1", logo: "/tech-sponsor-logo-1.jpg", placeholder: "REEMPLAZAR: Logo sponsor 1" },
-  { name: "Sponsor Bronce 2", logo: "/gaming-sponsor-logo-2.jpg", placeholder: "REEMPLAZAR: Logo sponsor 2" },
-  { name: "Sponsor Bronce 3", logo: "/software-sponsor-logo-3.jpg", placeholder: "REEMPLAZAR: Logo sponsor 3" },
-]
+const silverSponsors: { name: string, logo: string, placeholder: string }[] = [];
 
 export function SponsorsSection() {
   return (
-    <section id="sponsors" className="py-20 px-4 hex-pattern">
+    <section id="sponsors" className="py-20 px-4 hud-grid">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
@@ -41,7 +34,7 @@ export function SponsorsSection() {
           </p>
         </div>
 
-        <HudFrame label="Organizadores Principales" className="mb-8">
+        <HudFrame label="Organizadores" className="mb-8">
           <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16 py-4">
             {goldSponsors.map((sponsor, index) => (
               <SponsorLogo key={index} {...sponsor} tier="gold" />
@@ -49,21 +42,15 @@ export function SponsorsSection() {
           </div>
         </HudFrame>
 
-        <HudFrame label="Auspiciantes" className="mb-8">
+        {silverSponsors.length > 0 && (
+        <HudFrame label="Auspician" className="mb-8">
           <div className="flex flex-wrap items-center justify-center gap-6 md:gap-12 py-4">
             {silverSponsors.map((sponsor, index) => (
               <SponsorLogo key={index} {...sponsor} tier="silver" />
-            ))}
-          </div>
-        </HudFrame>
-
-        <HudFrame label="Colaboradores">
-          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 py-4">
-            {bronzeSponsors.map((sponsor, index) => (
-              <SponsorLogo key={index} {...sponsor} tier="bronze" />
-            ))}
-          </div>
-        </HudFrame>
+              ))}
+            </div>
+          </HudFrame>
+        )}
       </div>
     </section>
   )

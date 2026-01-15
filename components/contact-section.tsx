@@ -8,7 +8,7 @@ const contactMethods = [
     label: "Discord",
     value: "discord.gg/paranagamejam",
     href: "https://discord.gg",
-    description: "Únete a nuestra comunidad",
+    description: "Únete al servidor de la sede",
   },
   {
     icon: Mail,
@@ -20,15 +20,15 @@ const contactMethods = [
   {
     icon: Phone,
     label: "WhatsApp",
-    value: "+54 343 XXX-XXXX",
-    href: "https://wa.me/54343XXXXXXX",
+    value: "+54 343 451-3982",
+    href: "https://wa.me/543434513982",
     description: "Atención directa",
   },
 ]
 
 export function ContactSection() {
   return (
-    <section id="contacto" className="py-20 px-4 bg-card/30">
+    <section id="contacto" className="hud-grid hex-pattern py-20 px-4 bg-card/30">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">

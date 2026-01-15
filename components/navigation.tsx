@@ -7,12 +7,11 @@ import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navLinks = [
-  { label: "Inicio", href: "/#inicio" },
+  { label: "Inicio", href: "/" },
   { label: "Cronograma", href: "/#cronograma" },
-  { label: "Mentores", href: "/#mentores" },
   { label: "Sponsors", href: "/#sponsors" },
-  { label: "Contacto", href: "/#contacto" },
   { label: "Convivencia", href: "/convivencia" },
+  { label: "Contacto", href: "/#contacto" },
 ]
 
 export function Navigation() {
@@ -60,7 +59,7 @@ export function Navigation() {
               asChild
               className="bg-primary text-primary-foreground hover:bg-[#1ecf7a] uppercase tracking-wider font-bold"
             >
-              <a href="https://globalgamejam.org" target="_blank" rel="noopener noreferrer">
+              <a href="https://forms.gle/T2fBkjApbVzQFzgZ9" target="_blank" rel="noopener noreferrer">
                 Registrarse
               </a>
             </Button>
@@ -95,7 +94,7 @@ export function Navigation() {
               asChild
               className="w-full bg-primary text-primary-foreground hover:bg-[#1ecf7a] uppercase tracking-wider font-bold"
             >
-              <a href="https://globalgamejam.org" target="_blank" rel="noopener noreferrer">
+              <a href="https://forms.gle/T2fBkjApbVzQFzgZ9" target="_blank" rel="noopener noreferrer">
                 Registrarse
               </a>
             </Button>

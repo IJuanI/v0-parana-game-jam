@@ -15,17 +15,16 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Paraná Game Jam 2025 | Global Game Jam",
+  title: "Paraná Game Jam 2026 | Global Game Jam",
   description:
-    "Únete a la Paraná Game Jam 2025, parte del Global Game Jam. Del 30 de enero al 1 de febrero en Mirador TEC, Paraná. ¡Crea videojuegos en 48 horas!",
+    "Únete a la Paraná Game Jam 2026, parte del Global Game Jam. Del 30 de enero al 1 de febrero en Mirador TEC, Paraná. ¡Crea videojuegos en 48 horas!",
   keywords: ["game jam", "paraná", "global game jam", "videojuegos", "desarrollo de juegos", "entre ríos"],
   openGraph: {
-    title: "Paraná Game Jam 2025",
+    title: "Paraná Game Jam 2026",
     description: "Crea videojuegos en 48 horas. Del 30 de enero al 1 de febrero.",
     locale: "es_AR",
     type: "website",
   },
-  generator: "v0.app",
 }
 
 export const viewport: Viewport = {
