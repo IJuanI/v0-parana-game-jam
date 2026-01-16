@@ -1,9 +1,23 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { HudFrame } from "@/components/hud-frame"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, Shield, Users, Bed, ShowerHead, UtensilsCrossed, Building, Lock, Baby } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "Normas de Convivencia",
+  description:
+    "Normas de convivencia para participantes de la Paraná Game Jam 2026. Reglas de respeto, seguridad y comportamiento durante el evento.",
+  alternates: {
+    canonical: "/convivencia",
+  },
+  openGraph: {
+    title: "Normas de Convivencia | Paraná Game Jam 2026",
+    description: "Reglas y normas para garantizar una experiencia segura y respetuosa durante el evento.",
+  },
+}
 
 const policies = [
   {

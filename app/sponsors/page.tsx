@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
 import { Navigation } from "@/components/navigation"
@@ -16,6 +17,19 @@ import {
   Sparkles,
   Gamepad,
 } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "Ser Sponsor",
+  description:
+    "Patrocina la Paraná Game Jam 2026 y conecta tu marca con la comunidad de desarrollo de videojuegos de Entre Ríos. Descubrí los beneficios de ser sponsor del Global Game Jam en Argentina.",
+  alternates: {
+    canonical: "/sponsors",
+  },
+  openGraph: {
+    title: "Ser Sponsor | Paraná Game Jam 2026",
+    description: "Conecta tu marca con la comunidad gamedev de Entre Ríos. Patrocina el Global Game Jam en Argentina.",
+  },
+}
 
 const ggjStats = [
   { value: "900+", label: "Sedes en el mundo", icon: Globe },

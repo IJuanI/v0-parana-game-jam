@@ -10,7 +10,7 @@ const mentors = [
     contactLink: "#",
   },
   {
-    name: "Franco Degano",
+    name: "Nombre del Mentor",
     role: "Programador",
     specialty: "Unity / C#",
     icon: Code2,

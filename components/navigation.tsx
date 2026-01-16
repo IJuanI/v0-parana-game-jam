@@ -32,15 +32,15 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo - Text only */}
-          <Link href="/" className="flex items-center gap-2">
-            <span className="text-xl font-extrabold">
+          <Link href="/" className="flex items-center gap-2 flex-shrink-0">
+            <span className="text-xl font-extrabold whitespace-nowrap">
               <span className="text-primary text-glow-green">Paraná</span>{" "}
               <span className="text-secondary text-glow-purple">Game</span> <span className="text-foreground">Jam</span>
             </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -54,7 +54,7 @@ export function Navigation() {
           </div>
 
           {/* CTA Buttons Section */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-3">
             <Button
               asChild
               className="bg-secondary text-secondary-foreground hover:bg-[#6d3fb5] uppercase tracking-wider font-bold"
@@ -72,7 +72,7 @@ export function Navigation() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-foreground p-2"
+            className="lg:hidden text-foreground p-2"
             aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -82,7 +82,7 @@ export function Navigation() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-background border-b border-secondary/30">
+        <div className="lg:hidden bg-background border-b border-secondary/30">
           <div className="px-4 py-4 space-y-4">
             {navLinks.map((link) => (
               <Link
