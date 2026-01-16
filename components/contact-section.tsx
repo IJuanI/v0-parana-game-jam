@@ -71,18 +71,6 @@ export function ContactSection() {
             </HudFrame>
           ))}
         </div>
-
-        <HudFrame className="text-center">
-          <h3 className="text-lg font-semibold text-foreground mb-6">Números Locales y Regionales</h3>
-          <div className="grid md:grid-cols-2 gap-8">
-            {regionalNumbers.map((number, index) => (
-              <div key={index}>
-                <p className="text-muted-foreground text-sm mb-2">{number.label}</p>
-                <p className="text-foreground font-mono text-lg">{number.value}</p>
-              </div>
-            ))}
-          </div>
-        </HudFrame>
       </div>
     </section>
   )

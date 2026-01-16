@@ -32,7 +32,7 @@ export function HeroSection() {
       <div className="relative z-10 max-w-6xl mx-auto px-4 py-20 text-center">
         <div className="mb-6 flex justify-center">
           <Image
-            src="/images/ggj.png"
+            src="/logos/logo.svg"
             alt="Global Game Jam"
             width={120}
             height={80}
@@ -64,17 +64,17 @@ export function HeroSection() {
         </div>
 
         {/* Event Time & Location - with Mirador TEC logo */}
-        <a href="https://miradortec.net.ar/" className="flex flex-wrap items-center justify-center gap-4 mb-6">
+        <div className="flex flex-wrap items-center justify-center gap-4 mb-8">
           <div className="bg-secondary/20 border border-secondary/30 rounded px-4 py-2">
             <span className="text-secondary font-bold">INICIO 16 HS • CIERRE 19 HS</span>
           </div>
-          <div className="flex items-center justify-center gap-2 bg-card/50 border border-primary/30 rounded px-4 py-2">
+          <a href="https://miradortec.net.ar/" className="flex items-center justify-center gap-2 bg-card/50 border border-primary/30 rounded px-4 py-2">
             <span className="font-bold text-muted-foreground mt-1">LUGAR:</span>
             <div className="flex items-center justify-center">
               <Image src="/images/mirador-tec.png" alt="Mirador TEC" width={100} height={24} className="h-5 w-auto" />
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
 
         <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/30 rounded-lg px-4 py-2 mb-6">
           <span className="text-sm text-muted-foreground">

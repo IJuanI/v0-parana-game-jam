@@ -211,10 +211,10 @@
 @keyframes float {
   0%,
   100% {
-    transform: translateY(0);
+    transform: translateY(0) rotate(10deg);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-10px) rotate(-5deg);
   }
 }
 

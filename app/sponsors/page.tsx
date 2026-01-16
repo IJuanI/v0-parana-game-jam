@@ -99,7 +99,7 @@ export default function SponsorsPage() {
               <span className="text-primary">Paraná Game Jam</span>
             </h1>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              Conectá tu marca con la comunidad de desarrollo de videojuegos más grande del mundo.
+              Conectá tu marca con la comunidad de desarrollo de videojuegos de Entre Ríos.
             </p>
           </div>
 
