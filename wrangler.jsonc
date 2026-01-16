@@ -1,6 +1,6 @@
 {
   // Configuration for Cloudflare Pages deployment
-  "name": "v0-parana-game-jam",
+  "name": "parana-game-jam",
   "compatibility_date": "2024-01-01",
   "assets": {
     "directory": "./out"
