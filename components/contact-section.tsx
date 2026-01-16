@@ -6,8 +6,8 @@ const contactMethods = [
   {
     icon: MessageCircle,
     label: "Discord",
-    value: "discord.gg/paranagamejam",
-    href: "https://discord.gg",
+    value: "discord.gg/Kh6JDj44cE",
+    href: "https://discord.gg/Kh6JDj44cE",
     description: "Únete al servidor de la sede",
   },
   {
@@ -20,22 +20,12 @@ const contactMethods = [
   {
     icon: Phone,
     label: "WhatsApp",
-    value: "+54 [LOCAL_NUMBER]",
-    href: "https://wa.me/54",
+    value: "+54 9 343 451 3982",
+    href: "https://wa.me/+5493434513982",
     description: "Atención directa",
   },
 ]
 
-const regionalNumbers = [
-  {
-    label: "Paraná Local",
-    value: "[PARANÁ_NUMBER]",
-  },
-  {
-    label: "Entre Ríos Regional",
-    value: "[ENTRERÍOS_NUMBER]",
-  },
-]
 
 export function ContactSection() {
   return (

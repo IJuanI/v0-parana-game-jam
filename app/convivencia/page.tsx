@@ -97,55 +97,55 @@ export default function ConvivenciaPage() {
           </Button>
 
           {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <div className="text-center mb-8">
+            <h1 className="text-3xl md:text-4xl font-bold mb-3">
               <span className="text-secondary">Normas de</span> <span className="text-foreground">Convivencia</span>
             </h1>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-muted-foreground text-base max-w-2xl mx-auto">
               Para garantizar una experiencia positiva, segura y respetuosa para todos los participantes, solicitamos el
               cumplimiento de las siguientes normas básicas de convivencia.
             </p>
           </div>
 
-          {/* Intro */}
-          <HudFrame label="Bienvenida" className="mb-8">
-            <p className="text-foreground leading-relaxed">
-              La <span className="text-primary">Paraná Game Jam</span> es un espacio inclusivo donde personas de todas
-              las edades, géneros, orientaciones y niveles de experiencia se reúnen para crear videojuegos. Nuestro
-              objetivo es fomentar la creatividad, el aprendizaje y la colaboración en un ambiente seguro y respetuoso.
-            </p>
-          </HudFrame>
+          {/* Intro & Important Notice */}
+          <div className="space-y-4 mb-6">
+            <HudFrame label="Bienvenida">
+              <p className="text-foreground text-base leading-relaxed">
+                La <span className="text-primary">Paraná Game Jam</span> es un espacio inclusivo donde personas de todas
+                las edades, genders, orientaciones y niveles de experiencia se reúnen para crear videojuegos. Nuestro
+                objetivo es fomentar la creatividad, el aprendizaje y la colaboración en un ambiente seguro y respetuoso.
+              </p>
+            </HudFrame>
 
-          <HudFrame label="Importante" className="mb-8 border-primary/50 bg-primary/5">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
-                <Baby className="w-6 h-6 text-primary" />
+            <HudFrame label="Importante" className="border-primary/50 bg-primary/5">
+              <div className="flex items-start gap-3">
+                <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                  <Baby className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-base font-semibold text-foreground mb-1">Menores de Edad</h3>
+                  <p className="text-muted-foreground text-sm">
+                    Los <span className="text-primary font-semibold">menores de edad</span> deben estar acompañados por un adulto responsable durante toda la Game Jam. El adulto será responsable del menor y debe permanecer en las instalaciones.
+                  </p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">Participantes Menores de Edad</h3>
-                <p className="text-muted-foreground">
-                  Los <span className="text-primary font-semibold">menores de edad</span> que asistan al evento deberán
-                  estar acompañados por un adulto responsable durante toda la duración de la Game Jam. El adulto
-                  acompañante será responsable del menor y deberá permanecer en las instalaciones del evento.
-                </p>
-              </div>
-            </div>
-          </HudFrame>
+            </HudFrame>
+          </div>
 
-          {/* Policies - now in single column for better readability */}
-          <div className="space-y-6 mb-8">
-            {policies.map((policy, index) => (
+          {/* Policies - 2 column layout for first 6 policies */}
+          <div className="grid md:grid-cols-2 gap-4 mb-4">
+            {policies.slice(0, 6).map((policy, index) => (
               <HudFrame key={index} className="h-full">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <policy.icon className="w-5 h-5 text-primary" />
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground">{policy.title}</h3>
+                  <h3 className="text-lg font-semibold text-foreground leading-tight">{policy.title}</h3>
                 </div>
-                <ul className="space-y-2">
+                <ul className="space-y-1">
                   {policy.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="text-muted-foreground text-sm flex gap-2">
-                      <span className="text-primary mt-1">•</span>
+                    <li key={itemIndex} className="text-muted-foreground text-sm flex gap-1.5">
+                      <span className="text-primary mt-0.5">•</span>
                       <span>{item}</span>
                     </li>
                   ))}
@@ -154,52 +154,71 @@ export default function ConvivenciaPage() {
             ))}
           </div>
 
-          {/* Consequences */}
-          <HudFrame label="Incumplimiento" className="mb-8 border-destructive/30">
-            <h3 className="text-lg font-semibold text-foreground mb-4">Consecuencias del Incumplimiento</h3>
-            <p className="text-muted-foreground mb-4 text-sm">
-              Los organizadores se reservan el derecho de tomar las siguientes medidas en caso de incumplimiento de
-              estas normas:
-            </p>
-            <ol className="space-y-2">
-              {consequences.map((consequence, index) => (
-                <li key={index} className="text-muted-foreground text-sm flex gap-2">
-                  <span className="text-destructive font-mono">{index + 1}.</span>
-                  <span>{consequence}</span>
-                </li>
-              ))}
-            </ol>
-          </HudFrame>
+          {/* Seguridad and Incumplimiento - Side by Side */}
+          <div className="grid md:grid-cols-2 gap-4 mb-6">
+            <HudFrame className="h-full">
+              <div className="flex items-center gap-2 mb-3">
+                <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <Lock className="w-5 h-5 text-primary" />
+                </div>
+                <h3 className="text-lg font-semibold text-foreground leading-tight">{policies[6].title}</h3>
+              </div>
+              <ul className="space-y-1">
+                {policies[6].items.map((item, itemIndex) => (
+                  <li key={itemIndex} className="text-muted-foreground text-sm flex gap-1.5">
+                    <span className="text-primary mt-0.5">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </HudFrame>
+
+            <HudFrame label="Incumplimiento" className="h-full border-destructive/30">
+              <h3 className="text-base font-semibold text-foreground mb-2">Consecuencias</h3>
+              <p className="text-muted-foreground mb-2 text-sm">
+                Los organizadores pueden tomar las siguientes medidas:
+              </p>
+              <ol className="space-y-1">
+                {consequences.map((consequence, index) => (
+                  <li key={index} className="text-muted-foreground text-sm flex gap-1.5">
+                    <span className="text-destructive font-mono">{index + 1}.</span>
+                    <span>{consequence}</span>
+                  </li>
+                ))}
+              </ol>
+            </HudFrame>
+          </div>
 
           {/* Reporting */}
-          <HudFrame label="Reportar Incidentes" className="mb-8">
-            <h3 className="text-lg font-semibold text-foreground mb-4">¿Cómo Reportar un Incidente?</h3>
-            <p className="text-muted-foreground mb-4 text-sm">
-              Si experimentás o sos testigo de cualquier comportamiento que viole estas normas, por favor reportalo
-              inmediatamente a cualquier miembro del equipo organizador. Podés identificarlos por sus credenciales de{" "}
-              <span className="text-primary">STAFF</span>.
-            </p>
-            <p className="text-muted-foreground text-sm">
-              También podés contactarnos de forma confidencial a través de nuestro
-              <a href="mailto:contacto@paranagamejam.com" className="text-secondary hover:underline ml-1">
-                email de contacto
-              </a>{" "}
-              o por
-              <a
-                href="https://discord.gg"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-secondary hover:underline ml-1"
-              >
-                mensaje privado en Discord
-              </a>
-              .
-            </p>
-          </HudFrame>
+          <div className="space-y-4 mb-6">
+            <HudFrame label="Reportar Incidentes">
+              <h3 className="text-base font-semibold text-foreground mb-2">¿Cómo Reportar?</h3>
+              <p className="text-muted-foreground mb-2 text-sm">
+                Si experimentás o sos testigo de cualquier comportamiento que viole estas normas, reportalo
+                inmediatamente a cualquier miembro del <span className="text-primary">STAFF</span>.
+              </p>
+              <p className="text-muted-foreground text-sm">
+                También podés contactarnos a través de nuestro
+                <a href="mailto:contacto@paranagamejam.com" className="text-secondary hover:underline ml-1">
+                  email
+                </a>{" "}
+                o por
+                <a
+                  href="https://discord.gg/Kh6JDj44cE"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-secondary hover:underline ml-1"
+                >
+                  Discord
+                </a>
+                .
+              </p>
+            </HudFrame>
+          </div>
 
           {/* Agreement */}
           <HudFrame className="text-center bg-primary/5 border-primary/30">
-            <p className="text-foreground font-semibold mb-2">
+            <p className="text-foreground font-semibold text-base mb-1">
               Al participar en la Paraná Game Jam, aceptás cumplir con estas normas de convivencia.
             </p>
             <p className="text-muted-foreground text-sm">
@@ -208,7 +227,7 @@ export default function ConvivenciaPage() {
           </HudFrame>
 
           {/* Back to Home */}
-          <div className="text-center mt-12">
+          <div className="text-center mt-8">
             <Button
               asChild
               className="bg-primary text-primary-foreground hover:bg-primary/90 font-mono uppercase tracking-wider"

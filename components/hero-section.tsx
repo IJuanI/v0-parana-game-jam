@@ -103,7 +103,7 @@ export function HeroSection() {
             size="lg"
             className="border-secondary text-secondary hover:bg-secondary/10 uppercase tracking-wider px-8 bg-transparent font-bold"
           >
-            <a href="https://discord.gg" target="_blank" rel="noopener noreferrer">
+            <a href="https://discord.gg/Kh6JDj44cE" target="_blank" rel="noopener noreferrer">
               Unirse al Discord
             </a>
           </Button>

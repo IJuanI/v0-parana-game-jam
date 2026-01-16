@@ -274,53 +274,57 @@ export default function SponsorsPage() {
 
             {/* Uso de Fondos */}
             <HudFrame label="Uso de Fondos" className="mb-12">
-              <h3 className="text-xl font-semibold text-foreground mb-6 text-center">¿Cómo se utilizan los fondos?</h3>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="font-semibold text-secondary mb-4">Presupuesto Estimado</h4>
+              <h3 className="text-xl md:text-2xl font-bold text-foreground mb-6 text-center">Inversión en la Comunidad</h3>
+              <div className="space-y-6 text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+                <p>
+                  Todo el apoyo recibido por parte de nuestros sponsors se reinvierte directamente en elevar la calidad del evento y fortalecer el ecosistema local de desarrollo de videojuegos. Nuestra gestión es transparente y enfocada en cuatro pilares fundamentales:
+                </p>
+                
+                <div className="grid md:grid-cols-2 gap-8 mt-8">
                   <div className="space-y-3">
-                    <div className="flex justify-between items-center p-3 bg-card rounded">
-                      <span className="text-muted-foreground">[CONCEPTO 1]</span>
-                      <span className="text-foreground font-mono">[MONTO 1]</span>
-                    </div>
-                    <div className="flex justify-between items-center p-3 bg-card rounded">
-                      <span className="text-muted-foreground">[CONCEPTO 2]</span>
-                      <span className="text-foreground font-mono">[MONTO 2]</span>
-                    </div>
-                    <div className="flex justify-between items-center p-3 bg-card rounded">
-                      <span className="text-muted-foreground">[CONCEPTO 3]</span>
-                      <span className="text-foreground font-mono">[MONTO 3]</span>
-                    </div>
-                    <div className="flex justify-between items-center p-3 bg-card rounded border border-primary/30">
-                      <span className="text-foreground font-semibold">Total</span>
-                      <span className="text-primary font-mono font-bold">[TOTAL]</span>
-                    </div>
+                    <h4 className="text-secondary font-bold flex items-center gap-2">
+                      <div className="w-2 h-2 rounded-full bg-secondary" />
+                      Logística y Confort
+                    </h4>
+                    <p className="text-sm">
+                      Garantizamos que los participantes tengan un espacio óptimo durante las 48 horas: conectividad de alta velocidad, zonas de descanso adecuadas y servicios de catering (desayunos, almuerzos y cenas) para que solo se preocupen por crear.
+                    </p>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <h4 className="text-primary font-bold flex items-center gap-2">
+                      <div className="w-2 h-2 rounded-full bg-primary" />
+                      Premios y Reconocimientos
+                    </h4>
+                    <p className="text-sm">
+                      Buscamos incentivar el talento mediante premios que ayuden a los equipos a seguir desarrollando sus proyectos, además de kits de bienvenida y materiales que hacen de la Game Jam una experiencia memorable.
+                    </p>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <h4 className="text-secondary font-bold flex items-center gap-2">
+                      <div className="w-2 h-2 rounded-full bg-secondary" />
+                      Infraestructura y Técnica
+                    </h4>
+                    <p className="text-sm">
+                      Cubrimos los costos operativos de las instalaciones, sistemas de acreditación, seguridad y el soporte técnico necesario para que el desarrollo no se detenga en ningún momento del fin de semana.
+                    </p>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <h4 className="text-primary font-bold flex items-center gap-2">
+                      <div className="w-2 h-2 rounded-full bg-primary" />
+                      Difusión y Comunidad
+                    </h4>
+                    <p className="text-sm">
+                      Invertimos en la generación de contenido, fotografía, video y streaming para que el trabajo de los participantes llegue a más personas, empresas y potenciales inversores del sector.
+                    </p>
                   </div>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-secondary mb-4">Desglose de Inversión</h4>
-                  <p className="text-muted-foreground mb-4">
-                    Tu inversión se destina a garantizar una experiencia de clase mundial para todos los participantes:
-                  </p>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary">•</span>
-                      <span>[DETALLE DE USO 1]</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary">•</span>
-                      <span>[DETALLE DE USO 2]</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary">•</span>
-                      <span>[DETALLE DE USO 3]</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary">•</span>
-                      <span>[DETALLE DE USO 4]</span>
-                    </li>
-                  </ul>
-                </div>
+
+                <p className="text-center pt-4 italic text-sm">
+                  Al ser una organización sin fines de lucro, cada peso aportado tiene como único fin el crecimiento de la industria regional.
+                </p>
               </div>
             </HudFrame>
           </div>
@@ -337,7 +341,7 @@ export default function SponsorsPage() {
                 size="lg"
                 className="bg-primary text-primary-foreground hover:bg-[#1ecf7a] uppercase tracking-wider px-8 font-bold"
               >
-                <a href="mailto:sponsorship@paranagamejam.com">Contratá tu Sponsorship Ahora</a>
+                <a href="mailto:contacto@paranagamejam.com">Envianos un Correo</a>
               </Button>
               <Button
                 asChild
@@ -345,7 +349,7 @@ export default function SponsorsPage() {
                 size="lg"
                 className="border-secondary text-secondary hover:bg-secondary/10 uppercase tracking-wider px-8 bg-transparent font-bold"
               >
-                <a href="https://wa.me/5493435000000" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/+5493434513982" target="_blank" rel="noopener noreferrer">
                   Habla por WhatsApp
                 </a>
               </Button>

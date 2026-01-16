@@ -1,40 +1,41 @@
 import { MentorCard } from "./mentor-card"
+import { Gamepad2, Code2, Palette, Music } from "lucide-react"
 
 const mentors = [
   {
-    name: "Nombre del Mentor",
+    name: "Lionel Angerami",
     role: "Game Designer",
     specialty: "Diseño de niveles",
-    image: "/professional-game-designer-portrait.jpg",
-    placeholder: "REEMPLAZAR: Foto mentor 1",
+    icon: Gamepad2,
+    contactLink: "#",
   },
   {
-    name: "Nombre del Mentor",
+    name: "Franco Degano",
     role: "Programador",
     specialty: "Unity / C#",
-    image: "/professional-programmer.png",
-    placeholder: "REEMPLAZAR: Foto mentor 2",
+    icon: Code2,
+    contactLink: "#",
   },
   {
     name: "Nombre del Mentor",
     role: "Programador",
     specialty: "Godot / Unreal",
-    image: "/professional-programmer.png",
-    placeholder: "REEMPLAZAR: Foto mentor 2",
+    icon: Code2,
+    contactLink: "#",
   },
   {
-    name: "Nombre del Mentor",
+    name: "Martín Valpondi",
     role: "Diseño UI/UX",
-    specialty: "Interfaz y experiencia de usuario",
-    image: "/professional-digital-artist-portrait.jpg",
-    placeholder: "REEMPLAZAR: Foto mentor 3",
+    specialty: "Experiencia de usuario",
+    icon: Palette,
+    contactLink: "#",
   },
   {
     name: "Nombre del Mentor",
     role: "Sound Designer",
     specialty: "Audio para juegos",
-    image: "/professional-sound-designer.png",
-    placeholder: "REEMPLAZAR: Foto mentor 4",
+    icon: Music,
+    contactLink: "#",
   }
 ]
 

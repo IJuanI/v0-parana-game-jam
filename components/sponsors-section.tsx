@@ -8,18 +8,35 @@ const goldSponsors = [
     name: "Entre Ríos GameDevs",
     logo: "/logos/organizadores/ergd-logo-color.svg",
     placeholder: "Entre Ríos GameDevs",
+    width: "normal" as const,
   },
   {
     name: "Polo Tecnológico del Paraná",
     logo: "/logos/organizadores/Polo Tec.PNG",
     placeholder: "Polo Tecnologico",
+    width: "normal" as const,
   },
-  { name: "Secretaria de Ciencia, Tecnología e Innovación", logo: "/logos/organizadores/ER-CyT.png", placeholder: "Ministerio de Desarrollo Económico - Gobierno de Entre Ríos" },
-  { name: "FCyT - UADER", logo: "/logos/organizadores/FCyT.svg", placeholder: "Facultad de Ciencia y Tecnología - UADER" },
-  { name: "Club de Emprendedores", logo: "/logos/organizadores/Club-Emprendedores.png", placeholder: "Club de Emprendedores" },
+  { 
+    name: "Secretaria de Ciencia, Tecnología e Innovación", 
+    logo: "/logos/organizadores/ER-CyT.png", 
+    placeholder: "Ministerio de Desarrollo Económico - Gobierno de Entre Ríos",
+    width: "wide" as const,
+  },
+  { 
+    name: "FCyT - UADER", 
+    logo: "/logos/organizadores/FCyT.svg", 
+    placeholder: "Facultad de Ciencia y Tecnología - UADER",
+    width: "normal" as const,
+  },
+  { 
+    name: "Club de Emprendedores", 
+    logo: "/logos/organizadores/Club-Emprendedores.png", 
+    placeholder: "Club de Emprendedores",
+    width: "wide" as const,
+  },
 ]
 
-const silverSponsors: { name: string; logo: string; placeholder: string }[] = []
+const silverSponsors: { name: string; logo: string; placeholder: string; width?: "narrow" | "normal" | "wide" | "extra-wide" }[] = []
 
 export function SponsorsSection() {
   return (
@@ -38,7 +55,7 @@ export function SponsorsSection() {
         <HudFrame label="Organizadores" className="mb-8">
           <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16 py-4">
             {goldSponsors.map((sponsor, index) => (
-              <SponsorLogo key={index} {...sponsor} tier="gold" />
+              <SponsorLogo key={index} name={sponsor.name} logo={sponsor.logo} placeholder={sponsor.placeholder} width={sponsor.width} tier="gold" />
             ))}
           </div>
         </HudFrame>
@@ -54,10 +71,11 @@ export function SponsorsSection() {
         )}
 
         <div className="text-center">
-          <p className="text-muted-foreground mb-4">¿Interesado en patrocinar el evento?</p>
+          <p className="text-muted-foreground mb-6 text-lg">¿Interesado en patrocinar el evento?</p>
           <Button
             asChild
-            className="bg-secondary text-secondary-foreground hover:bg-[#6d3fb5] uppercase tracking-wider font-bold"
+            size="default"
+            className="bg-secondary text-secondary-foreground hover:bg-[#6d3fb5] uppercase tracking-wider font-bold text-lg px-10 py-4 h-auto"
           >
             <Link href="/sponsors">Ser Sponsor</Link>
           </Button>
