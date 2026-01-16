@@ -25,7 +25,7 @@ export function SponsorLogo({ name, logo, tier, placeholder, width = "normal" }:
   return (
     <div className="relative group">
       <div
-        className={`${sizeClasses[tier]} ${widthClasses[width]} relative transition-all duration-300 opacity-70 hover:opacity-100`}
+        className={`${sizeClasses[tier]} ${widthClasses[width]} relative transition-all duration-300`}
       >
         <Image src={logo || "/placeholder.svg"} alt={name} fill className="object-contain" />
       </div>
