@@ -3,46 +3,72 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { HudFrame } from "@/components/hud-frame"
 import { Button } from "@/components/ui/button"
-import { ArrowLeft, Shield, Users, Heart, AlertTriangle } from "lucide-react"
+import { ArrowLeft, Shield, Users, Bed, ShowerHead, UtensilsCrossed, Building, Lock, Baby } from "lucide-react"
 
 const policies = [
   {
     icon: Shield,
-    title: "Respeto Mutuo",
+    title: "1. Trato y Respeto",
     items: [
-      "Tratá a todos los participantes con respeto y cortesía.",
-      "No se tolerará ningún tipo de discriminación por género, orientación sexual, etnia, religión, o cualquier otra característica personal.",
-      "Las opiniones y perspectivas de todos son valiosas.",
+      "Tratar a todas las personas con respeto, empatía y consideración.",
+      "No se tolerarán actitudes discriminatorias, ofensivas, violentas o de acoso de ningún tipo.",
+      "Respetar opiniones, ideas y formas de trabajo distintas a las propias.",
+      "No utilizar elementos ajenos sin previo consentimiento.",
+      "Cualquier conflicto debe resolverse mediante el diálogo o con ayuda de la organización.",
     ],
   },
   {
     icon: Users,
-    title: "Colaboración",
+    title: "2. Convivencia General",
     items: [
-      "La Game Jam es un evento colaborativo, no competitivo.",
-      "Compartí conocimientos y ayudá a otros participantes cuando sea posible.",
-      "Respetá el trabajo y las ideas de los demás equipos.",
-      "Si un equipo necesita ayuda, ofrecé tu apoyo sin esperar nada a cambio.",
+      "Mantener un ambiente colaborativo y cordial durante toda la duración del evento.",
+      "Respetar los espacios comunes manteniendo el orden y la limpieza.",
+      "Seguir las indicaciones del equipo organizador en todo momento.",
     ],
   },
   {
-    icon: Heart,
-    title: "Ambiente Seguro",
+    icon: Bed,
+    title: "3. Descanso y Zona para Dormir",
     items: [
-      "El acoso de cualquier tipo no será tolerado.",
-      "Esto incluye comentarios ofensivos, intimidación, fotografías no consentidas, interrupción sostenida de charlas u otros eventos.",
-      "Respetá el espacio personal de los demás.",
-      "Si alguien te pide que pares un comportamiento, hacelo inmediatamente.",
+      "Utilizar la zona de descanso exclusivamente para dormir o reposar.",
+      "Mantener silencio y orden en este espacio.",
+      "Mantener las luces de lámparas y pantallas apagadas.",
     ],
   },
   {
-    icon: AlertTriangle,
-    title: "Uso del Espacio",
+    icon: ShowerHead,
+    title: "4. Baños e Higiene Personal",
     items: [
-      "Mantené limpio tu espacio de trabajo y las áreas comunes.",
+      "Hacer uso responsable de los insumos comunes (papel higiénico, jabón, etc.)",
+      "Dejar las duchas y baños limpios luego de usarlos.",
+      "Cuidar la higiene personal como parte del respeto hacia los demás participantes.",
+    ],
+  },
+  {
+    icon: UtensilsCrossed,
+    title: "5. Comedor",
+    items: [
+      "Respetar los horarios establecidos para el uso del comedor.",
+      "Mantener el espacio limpio, ordenado y libre de residuos.",
+      "No retirar utensilios o elementos del comedor sin autorización.",
+    ],
+  },
+  {
+    icon: Building,
+    title: "6. Cuidado del Espacio y Recursos",
+    items: [
+      "Cuidar las instalaciones, mobiliario y equipamiento del evento.",
+      "No está permitido modificar espacios o recursos sin permiso.",
+      "Cada participante es responsable de sus pertenencias personales.",
+    ],
+  },
+  {
+    icon: Lock,
+    title: "7. Seguridad",
+    items: [
+      "No realizar acciones que puedan poner en riesgo la seguridad propia o ajena.",
+      "Informar a la organización ante cualquier situación incómoda, insegura o fuera de lugar.",
       "No consumas alcohol ni sustancias ilegales en el evento.",
-      "Respetá los equipos e instalaciones del lugar.",
-      "Seguí las indicaciones del personal de seguridad y organizadores.",
     ],
   },
 ]
@@ -52,6 +78,7 @@ const consequences = [
   "Expulsión del evento sin derecho a reembolso.",
   "Prohibición de participar en futuros eventos organizados por Paraná Game Jam.",
   "En casos graves, se podrá contactar a las autoridades correspondientes.",
+  "Cualquier otro agravio al sentido común podrá derivar en las mismas medidas.",
 ]
 
 export default function ConvivenciaPage() {
@@ -75,8 +102,8 @@ export default function ConvivenciaPage() {
               <span className="text-secondary">Normas de</span> <span className="text-foreground">Convivencia</span>
             </h1>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Para garantizar una experiencia positiva para todos los participantes, te pedimos que leas y respetes
-              estas normas durante el evento.
+              Para garantizar una experiencia positiva, segura y respetuosa para todos los participantes, solicitamos el
+              cumplimiento de las siguientes normas básicas de convivencia.
             </p>
           </div>
 
@@ -89,8 +116,24 @@ export default function ConvivenciaPage() {
             </p>
           </HudFrame>
 
-          {/* Policies */}
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
+          <HudFrame label="Importante" className="mb-8 border-primary/50 bg-primary/5">
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                <Baby className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-foreground mb-2">Participantes Menores de Edad</h3>
+                <p className="text-muted-foreground">
+                  Los <span className="text-primary font-semibold">menores de edad</span> que asistan al evento deberán
+                  estar acompañados por un adulto responsable durante toda la duración de la Game Jam. El adulto
+                  acompañante será responsable del menor y deberá permanecer en las instalaciones del evento.
+                </p>
+              </div>
+            </div>
+          </HudFrame>
+
+          {/* Policies - now in single column for better readability */}
+          <div className="space-y-6 mb-8">
             {policies.map((policy, index) => (
               <HudFrame key={index} className="h-full">
                 <div className="flex items-center gap-3 mb-4">

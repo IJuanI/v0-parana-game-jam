@@ -53,15 +53,19 @@ export function Navigation() {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
+          {/* CTA Buttons Section */}
+          <div className="hidden md:flex items-center gap-3">
+            <Button
+              asChild
+              className="bg-secondary text-secondary-foreground hover:bg-[#6d3fb5] uppercase tracking-wider font-bold"
+            >
+              <Link href="/sponsors">Ser Sponsor</Link>
+            </Button>
             <Button
               asChild
               className="bg-primary text-primary-foreground hover:bg-[#1ecf7a] uppercase tracking-wider font-bold"
             >
-              <a href="https://forms.gle/T2fBkjApbVzQFzgZ9" target="_blank" rel="noopener noreferrer">
-                Registrarse
-              </a>
+              <Link href="/registro">Registrarse</Link>
             </Button>
           </div>
 
@@ -90,14 +94,20 @@ export function Navigation() {
                 {link.label}
               </Link>
             ))}
-            <Button
-              asChild
-              className="w-full bg-primary text-primary-foreground hover:bg-[#1ecf7a] uppercase tracking-wider font-bold"
-            >
-              <a href="https://forms.gle/T2fBkjApbVzQFzgZ9" target="_blank" rel="noopener noreferrer">
-                Registrarse
-              </a>
-            </Button>
+            <div className="space-y-2 pt-2 border-t border-secondary/30">
+              <Button
+                asChild
+                className="w-full bg-secondary text-secondary-foreground hover:bg-[#6d3fb5] uppercase tracking-wider font-bold"
+              >
+                <Link href="/sponsors">Ser Sponsor</Link>
+              </Button>
+              <Button
+                asChild
+                className="w-full bg-primary text-primary-foreground hover:bg-[#1ecf7a] uppercase tracking-wider font-bold"
+              >
+                <Link href="/registro">Registrarse</Link>
+              </Button>
+            </div>
           </div>
         </div>
       )}

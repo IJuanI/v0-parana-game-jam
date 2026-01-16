@@ -16,6 +16,9 @@ export function Footer() {
             <Link href="/convivencia" className="text-muted-foreground hover:text-primary transition-colors font-mono">
               Normas de Convivencia
             </Link>
+            <Link href="/sponsors" className="text-muted-foreground hover:text-primary transition-colors font-mono">
+              Ser Sponsor
+            </Link>
             <a
               href="https://globalgamejam.org"
               target="_blank"
@@ -26,9 +29,7 @@ export function Footer() {
             </a>
           </div>
 
-          <p className="text-muted-foreground text-xs font-mono">
-            © 2026 Paraná Game Jam.
-          </p>
+          <p className="text-muted-foreground text-xs font-mono">© 2026 Paraná Game Jam.</p>
         </div>
       </div>
     </footer>

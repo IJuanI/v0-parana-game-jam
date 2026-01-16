@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata, Viewport } from "next"
 import { Oxanium, Inter } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import { GoogleAnalytics } from "@/components/google-analytics"
 import "./globals.css"
 
 const oxanium = Oxanium({
@@ -25,6 +26,7 @@ export const metadata: Metadata = {
     locale: "es_AR",
     type: "website",
   },
+    generator: 'v0.app'
 }
 
 export const viewport: Viewport = {
@@ -40,6 +42,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
+      <head>
+        <GoogleAnalytics />
+      </head>
       <body className={`${oxanium.variable} ${inter.variable} font-sans antialiased`}>
         {children}
         <Analytics />

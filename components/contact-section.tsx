@@ -20,9 +20,20 @@ const contactMethods = [
   {
     icon: Phone,
     label: "WhatsApp",
-    value: "+54 343 451-3982",
-    href: "https://wa.me/543434513982",
+    value: "+54 [LOCAL_NUMBER]",
+    href: "https://wa.me/54",
     description: "Atención directa",
+  },
+]
+
+const regionalNumbers = [
+  {
+    label: "Paraná Local",
+    value: "[PARANÁ_NUMBER]",
+  },
+  {
+    label: "Entre Ríos Regional",
+    value: "[ENTRERÍOS_NUMBER]",
   },
 ]
 
@@ -39,7 +50,7 @@ export function ContactSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-6 mb-12">
           {contactMethods.map((method, index) => (
             <HudFrame key={index} className="text-center hover:border-primary/50 transition-all duration-300">
               <div className="w-12 h-12 mx-auto mb-4 rounded-lg bg-secondary/10 flex items-center justify-center">
@@ -60,6 +71,18 @@ export function ContactSection() {
             </HudFrame>
           ))}
         </div>
+
+        <HudFrame className="text-center">
+          <h3 className="text-lg font-semibold text-foreground mb-6">Números Locales y Regionales</h3>
+          <div className="grid md:grid-cols-2 gap-8">
+            {regionalNumbers.map((number, index) => (
+              <div key={index}>
+                <p className="text-muted-foreground text-sm mb-2">{number.label}</p>
+                <p className="text-foreground font-mono text-lg">{number.value}</p>
+              </div>
+            ))}
+          </div>
+        </HudFrame>
       </div>
     </section>
   )

@@ -1,5 +1,7 @@
 import { HudFrame } from "./hud-frame"
 import { SponsorLogo } from "./sponsor-logo"
+import { Button } from "./ui/button"
+import Link from "next/link"
 
 const goldSponsors = [
   {
@@ -9,7 +11,11 @@ const goldSponsors = [
   },
   { name: "ERGD - Entre Ríos GameDevs", logo: "/ergd-gaming-community-logo.jpg", placeholder: "REEMPLAZAR: Logo ERGD" },
   { name: "Gobierno de Entre Ríos", logo: "/government-entre-rios-logo.jpg", placeholder: "REEMPLAZAR: Logo Gob. ER" },
-  { name: "Polo Tecnológico del Paraná", logo: "/polo-tecnologico-parana-logo.jpg", placeholder: "REEMPLAZAR: Logo Polo Tec" },
+  {
+    name: "Polo Tecnológico del Paraná",
+    logo: "/polo-tecnologico-parana-logo.jpg",
+    placeholder: "REEMPLAZAR: Logo Polo Tec",
+  },
   { name: "FCyT - UADER", logo: "/fcyt-uader-university-logo.jpg", placeholder: "REEMPLAZAR: Logo FCyT" },
   {
     name: "Mirador TEC",
@@ -18,7 +24,7 @@ const goldSponsors = [
   },
 ]
 
-const silverSponsors: { name: string, logo: string, placeholder: string }[] = [];
+const silverSponsors: { name: string; logo: string; placeholder: string }[] = []
 
 export function SponsorsSection() {
   return (
@@ -43,14 +49,24 @@ export function SponsorsSection() {
         </HudFrame>
 
         {silverSponsors.length > 0 && (
-        <HudFrame label="Auspician" className="mb-8">
-          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-12 py-4">
-            {silverSponsors.map((sponsor, index) => (
-              <SponsorLogo key={index} {...sponsor} tier="silver" />
+          <HudFrame label="Auspician" className="mb-8">
+            <div className="flex flex-wrap items-center justify-center gap-6 md:gap-12 py-4">
+              {silverSponsors.map((sponsor, index) => (
+                <SponsorLogo key={index} {...sponsor} tier="silver" />
               ))}
             </div>
           </HudFrame>
         )}
+
+        <div className="text-center">
+          <p className="text-muted-foreground mb-4">¿Interesado en patrocinar el evento?</p>
+          <Button
+            asChild
+            className="bg-secondary text-secondary-foreground hover:bg-[#6d3fb5] uppercase tracking-wider font-bold"
+          >
+            <Link href="/sponsors">Obtén más información</Link>
+          </Button>
+        </div>
       </div>
     </section>
   )

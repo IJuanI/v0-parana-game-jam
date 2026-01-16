@@ -1,7 +1,8 @@
 import Image from "next/image"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { CountdownTimer } from "./countdown-timer"
-import { Gamepad2, Zap } from "lucide-react"
+import { Gamepad2, Zap, Baby } from "lucide-react"
 
 export function HeroSection() {
   return (
@@ -63,28 +64,28 @@ export function HeroSection() {
         </div>
 
         {/* Event Time & Location - with Mirador TEC logo */}
-        <a href="https://miradortec.net.ar/" className="flex flex-wrap items-center justify-center gap-4 mb-8">
+        <a href="https://miradortec.net.ar/" className="flex flex-wrap items-center justify-center gap-4 mb-6">
           <div className="bg-secondary/20 border border-secondary/30 rounded px-4 py-2">
             <span className="text-secondary font-bold">INICIO 16 HS • CIERRE 19 HS</span>
           </div>
           <div className="flex items-center justify-center gap-2 bg-card/50 border border-primary/30 rounded px-4 py-2">
             <span className="font-bold text-muted-foreground mt-1">LUGAR:</span>
             <div className="flex items-center justify-center">
-              <Image
-                src="/images/mirador-tec.png"
-                alt="Mirador TEC"
-                width={100}
-                height={24}
-                className="h-5 w-auto"
-              />
+              <Image src="/images/mirador-tec.png" alt="Mirador TEC" width={100} height={24} className="h-5 w-auto" />
             </div>
           </div>
         </a>
 
+        <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/30 rounded-lg px-4 py-2 mb-6">
+          <span className="text-sm text-muted-foreground">
+            <span className="text-primary font-semibold">Menores de edad:</span> deben asistir acompañados por un adulto
+          </span>
+        </div>
+
         {/* Description */}
         <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto mb-10 leading-relaxed font-[family-name:var(--font-inter)]">
-          Únete a la experiencia más grande de desarrollo de videojuegos del mundo. 48 horas para crear, colaborar y dar
-          vida a tu juego. Sin importar tu experiencia, hay un lugar para vos.
+          Únete a 48 horas de puro desarrollo de videojuegos. Crea, colabora e innova con creativos de todo el mundo.
+          Sin importar tu experiencia, hay un lugar para vos.
         </p>
 
         {/* CTA Buttons */}
@@ -94,9 +95,7 @@ export function HeroSection() {
             size="lg"
             className="bg-primary text-primary-foreground hover:bg-[#1ecf7a] uppercase tracking-wider px-8 font-bold glow-pulse"
           >
-            <a href="https://forms.gle/T2fBkjApbVzQFzgZ9" target="_blank" rel="noopener noreferrer">
-              Registrarse Ahora
-            </a>
+            <Link href="/registro">Registrarse Ahora</Link>
           </Button>
           <Button
             asChild
