@@ -5,23 +5,18 @@ import Link from "next/link"
 
 const goldSponsors = [
   {
-    name: "Global Game Jam",
-    logo: "/images/ggj.png",
-    placeholder: "Global Game Jam",
+    name: "Entre Ríos GameDevs",
+    logo: "/logos/organizadores/ergd-logo-color.svg",
+    placeholder: "Entre Ríos GameDevs",
   },
-  { name: "ERGD - Entre Ríos GameDevs", logo: "/ergd-gaming-community-logo.jpg", placeholder: "REEMPLAZAR: Logo ERGD" },
-  { name: "Gobierno de Entre Ríos", logo: "/government-entre-rios-logo.jpg", placeholder: "REEMPLAZAR: Logo Gob. ER" },
   {
     name: "Polo Tecnológico del Paraná",
-    logo: "/polo-tecnologico-parana-logo.jpg",
-    placeholder: "REEMPLAZAR: Logo Polo Tec",
+    logo: "/logos/organizadores/Polo Tec.PNG",
+    placeholder: "Polo Tecnologico",
   },
-  { name: "FCyT - UADER", logo: "/fcyt-uader-university-logo.jpg", placeholder: "REEMPLAZAR: Logo FCyT" },
-  {
-    name: "Mirador TEC",
-    logo: "/images/mirador-tec.png",
-    placeholder: "Mirador TEC",
-  },
+  { name: "Secretaria de Ciencia, Tecnología e Innovación", logo: "/logos/organizadores/ER-CyT.png", placeholder: "Ministerio de Desarrollo Económico - Gobierno de Entre Ríos" },
+  { name: "FCyT - UADER", logo: "/logos/organizadores/FCyT.svg", placeholder: "Facultad de Ciencia y Tecnología - UADER" },
+  { name: "Club de Emprendedores", logo: "/logos/organizadores/Club-Emprendedores.png", placeholder: "Club de Emprendedores" },
 ]
 
 const silverSponsors: { name: string; logo: string; placeholder: string }[] = []
@@ -64,7 +59,7 @@ export function SponsorsSection() {
             asChild
             className="bg-secondary text-secondary-foreground hover:bg-[#6d3fb5] uppercase tracking-wider font-bold"
           >
-            <Link href="/sponsors">Obtén más información</Link>
+            <Link href="/sponsors">Ser Sponsor</Link>
           </Button>
         </div>
       </div>

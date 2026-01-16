@@ -24,8 +24,8 @@ const mentors = [
   },
   {
     name: "Nombre del Mentor",
-    role: "Artista 2D/3D",
-    specialty: "Arte conceptual",
+    role: "Diseño UI/UX",
+    specialty: "Interfaz y experiencia de usuario",
     image: "/professional-digital-artist-portrait.jpg",
     placeholder: "REEMPLAZAR: Foto mentor 3",
   },
@@ -35,14 +35,7 @@ const mentors = [
     specialty: "Audio para juegos",
     image: "/professional-sound-designer.png",
     placeholder: "REEMPLAZAR: Foto mentor 4",
-  },
-  {
-    name: "Nombre del Mentor",
-    role: "Narrativa",
-    specialty: "Storytelling interactivo",
-    image: "/professional-writer-portrait.png",
-    placeholder: "REEMPLAZAR: Foto mentor 6",
-  },
+  }
 ]
 
 export function MentorsSection() {
@@ -59,7 +52,7 @@ export function MentorsSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
           {mentors.map((mentor, index) => (
             <MentorCard key={index} {...mentor} />
           ))}

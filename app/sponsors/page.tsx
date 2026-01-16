@@ -10,11 +10,11 @@ import {
   Users,
   Trophy,
   Monitor,
-  Megaphone,
   CheckCircle,
   TrendingUp,
   Target,
   Sparkles,
+  Gamepad,
 } from "lucide-react"
 
 const ggjStats = [
@@ -25,29 +25,17 @@ const ggjStats = [
 ]
 
 const localStats = [
-  { value: "[NÚMERO]", label: "Participantes locales", icon: Users },
-  { value: "[NÚMERO]", label: "Desarrolladores Paraná", icon: Trophy },
-  { value: "[NÚMERO]", label: "Empresas participantes", icon: Target },
-  { value: "[NÚMERO]", label: "Proyectos esperados", icon: Sparkles },
-]
-
-const regionalStats = [
-  { value: "[NÚMERO]", label: "Participantes en la región", icon: Globe },
-  { value: "[NÚMERO]", label: "Sedes regionales", icon: Users },
-  { value: "[NÚMERO]", label: "Años de impacto", icon: TrendingUp },
-  { value: "[NÚMERO]", label: "Crecimiento anual", icon: Target },
+  { value: "15", label: "Sedes en Argentina", icon: Globe },
+  { value: "8", label: "Años en paraná", icon: TrendingUp },
+  { value: "50+", label: "Participantes locales", icon: Users },
+  { value: "12+", label: "Juegos por año", icon: Gamepad },
 ]
 
 const kitBenefits = [
   {
     icon: Monitor,
     title: "Presencia en el Sitio Web",
-    description: "Tu logo destacado en nuestra página oficial durante todo el evento y posteriores ediciones.",
-  },
-  {
-    icon: Megaphone,
-    title: "Redes Sociales",
-    description: "Publicaciones dedicadas mencionando a tu marca en todas nuestras redes sociales.",
+    description: "Tu logo destacado en nuestra página oficial durante todo el evento.",
   },
   {
     icon: Sparkles,
@@ -127,6 +115,30 @@ export default function SponsorsPage() {
             </div>
           </HudFrame>
 
+          {/* What about Parana */}
+          <HudFrame label="Entre Ríos GameDevs" className="mb-12">
+            <div className="flex flex-col md:flex-row gap-8 items-center">
+              <div className="flex-shrink-0">
+                <Image
+                  src="/logos/organizadores/ergd-icon-color.svg"
+                  alt="Global Game Jam"
+                  width={150}
+                  height={100}
+                  className="w-32 md:w-40 h-auto p-4"
+                />
+              </div>
+              <div>
+                <h2 className="text-2xl font-bold text-foreground mb-4">¿Se hacen Videojuegos en Entre Ríos?</h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  La <span className="text-primary font-semibold">Global Game Jam</span> es el evento de creación de
+                  videojuegos más grande del mundo. Durante 48 horas, miles de participantes en cientos de sedes
+                  alrededor del planeta trabajan juntos para crear videojuegos desde cero. Es una celebración de la
+                  creatividad, la colaboración y la innovación en la industria del entretenimiento digital.
+                </p>
+              </div>
+            </div>
+          </HudFrame>
+
           {/* Global Stats */}
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-center mb-8">
@@ -141,31 +153,8 @@ export default function SponsorsPage() {
                 </HudFrame>
               ))}
             </div>
-          </div>
-
-          {/* Local Stats */}
-          <div className="mb-12">
-            <h2 className="text-2xl font-bold text-center mb-8">
-              <span className="text-primary">Números</span> <span className="text-foreground">Locales</span>
-            </h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
               {localStats.map((stat, index) => (
-                <HudFrame key={index} className="text-center py-6">
-                  <stat.icon className="w-8 h-8 text-primary mx-auto mb-3" />
-                  <div className="text-3xl md:text-4xl font-bold text-foreground mb-1">{stat.value}</div>
-                  <div className="text-sm text-muted-foreground">{stat.label}</div>
-                </HudFrame>
-              ))}
-            </div>
-          </div>
-
-          {/* Regional Stats */}
-          <div className="mb-12">
-            <h2 className="text-2xl font-bold text-center mb-8">
-              <span className="text-secondary">Números</span> <span className="text-foreground">Regionales</span>
-            </h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {regionalStats.map((stat, index) => (
                 <HudFrame key={index} className="text-center py-6">
                   <stat.icon className="w-8 h-8 text-primary mx-auto mb-3" />
                   <div className="text-3xl md:text-4xl font-bold text-foreground mb-1">{stat.value}</div>
@@ -221,11 +210,11 @@ export default function SponsorsPage() {
                   <span className="text-xl text-muted-foreground ml-2">ARS</span>
                 </div>
                 <p className="text-muted-foreground max-w-md mx-auto">
-                  Una inversión accesible para conectar con la comunidad tech y gaming de la región.
+                  Una inversión accesible para conectar con la comunidad de gamedevs de la región.
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
                 {kitBenefits.map((benefit, index) => (
                   <div key={index} className="flex gap-4">
                     <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -247,11 +236,10 @@ export default function SponsorsPage() {
                 <ul className="space-y-3">
                   {[
                     "Logo en sitio web oficial",
-                    "Publicaciones en redes sociales",
                     "Mención en ceremonias",
                     "Presencia en streaming",
                     "Anuncios en pantalla principal",
-                    "Networking con la comunidad tech",
+                    "Networking con la comunidad",
                   ].map((item, index) => (
                     <li key={index} className="flex items-center gap-3">
                       <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
@@ -278,7 +266,7 @@ export default function SponsorsPage() {
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-primary font-bold">04.</span>
-                    <span>Apoyo al desarrollo de la industria tech regional.</span>
+                    <span>Apoyo al desarrollo de la industria de videojuegos regional.</span>
                   </li>
                 </ul>
               </HudFrame>
