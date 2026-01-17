@@ -40,7 +40,7 @@ const silverSponsors: { name: string; logo: string; placeholder: string; width?:
 
 export function SponsorsSection() {
   return (
-    <section id="sponsors" className="py-20 px-4 hud-grid">
+    <section id="colaboradores" className="py-20 px-4 hud-grid">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-extrabold mb-4">

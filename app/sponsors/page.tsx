@@ -42,7 +42,7 @@ const localStats = [
   { value: "15", label: "Sedes en Argentina", icon: Globe },
   { value: "8", label: "Años en paraná", icon: TrendingUp },
   { value: "50+", label: "Participantes locales", icon: Users },
-  { value: "12+", label: "Juegos por año", icon: Gamepad },
+  { value: "12+", label: "Juegos locales por año", icon: Gamepad },
 ]
 
 const kitBenefits = [
