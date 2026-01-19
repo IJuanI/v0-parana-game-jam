@@ -1,3 +1,5 @@
+"use client"
+
 import { LucideIcon, MessageSquare, ChevronRight } from "lucide-react"
 import Link from "next/link"
 
@@ -7,19 +9,35 @@ interface MentorCardProps {
   specialty: string
   icon: LucideIcon
   contactLink?: string
+  discordId?: string
+  contactLabel?: string
 }
 
-export function MentorCard({ name, role, specialty, icon: Icon, contactLink }: MentorCardProps) {
-  const CardWrapper = contactLink ? Link : "div"
-  const cardProps = contactLink 
-    ? { href: contactLink, target: "_blank", rel: "noopener noreferrer" } 
-    : {}
+export function MentorCard({ name, role, specialty, icon: Icon, contactLink, discordId, contactLabel }: MentorCardProps) {
+  const handleDiscordClick = (e: React.MouseEvent) => {
+    if (!discordId) return;
+    
+    e.preventDefault();
+    e.stopPropagation();
 
-  return (
-    <CardWrapper 
-      {...cardProps}
-      className="group relative block h-full cursor-pointer"
-    >
+    const appLink = `discord://-/users/${discordId}`;
+    const webLink = `https://discord.com/users/${discordId}`;
+
+    // Try to open the app
+    window.location.href = appLink;
+
+    // Fallback to web after a short delay if the app didn't open
+    setTimeout(() => {
+      if (document.hasFocus()) {
+        window.open(webLink, "_blank");
+      }
+    }, 500);
+  };
+
+  const isClickable = !!(contactLink || discordId);
+  
+  const content = (
+    <>
       {/* Outer glow on hover */}
       <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/0 via-secondary/0 to-primary/0 rounded-lg opacity-0 group-hover:opacity-100 group-hover:from-primary/40 group-hover:via-secondary/40 group-hover:to-primary/40 blur-sm transition-all duration-500" />
       
@@ -67,11 +85,11 @@ export function MentorCard({ name, role, specialty, icon: Icon, contactLink }: M
           </div>
           
           {/* Contact CTA */}
-          {contactLink && (
+          {isClickable && (
             <div className="mt-4 pt-3 border-t border-border/30 group-hover:border-primary/30 transition-colors">
               <div className="flex items-center justify-center gap-2 text-sm font-semibold text-muted-foreground group-hover:text-primary transition-colors duration-300">
                 <MessageSquare className="w-4 h-4" />
-                <span>Contactar</span>
+                <span>{contactLabel || "Contactar"}</span>
                 <ChevronRight className="w-4 h-4 translate-x-0 group-hover:translate-x-1 transition-transform duration-300" />
               </div>
             </div>
@@ -81,6 +99,30 @@ export function MentorCard({ name, role, specialty, icon: Icon, contactLink }: M
         {/* Bottom accent bar */}
         <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-primary/30 to-transparent group-hover:via-primary transition-all duration-300" />
       </div>
-    </CardWrapper>
-  )
+    </>
+  );
+
+  const className = `group relative block h-full ${isClickable ? 'cursor-pointer' : ''}`;
+
+  if (discordId) {
+    return (
+      <div onClick={handleDiscordClick} className={className}>
+        {content}
+      </div>
+    );
+  }
+
+  if (contactLink) {
+    return (
+      <Link href={contactLink} target="_blank" rel="noopener noreferrer" className={className}>
+        {content}
+      </Link>
+    );
+  }
+
+  return (
+    <div className={className}>
+      {content}
+    </div>
+  );
 }

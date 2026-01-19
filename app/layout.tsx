@@ -27,10 +27,9 @@ export const metadata: Metadata = {
     "Únete a la Paraná Game Jam 2026, sede oficial del Global Game Jam en Entre Ríos. Del 30 de enero al 1 de febrero en Mirador TEC, Paraná. Crea videojuegos en 48 horas con mentores profesionales, premios y una comunidad increíble.",
   icons: {
     icon: [
-      { url: "/icon-dark-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/logos/logo.svg", type: "image/svg+xml" },
     ],
-    apple: "/apple-icon.png",
+    apple: "/logos/logo.svg",
   },
   keywords: [
     "game jam",

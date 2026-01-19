@@ -34,6 +34,18 @@ const goldSponsors = [
     placeholder: "Club de Emprendedores",
     width: "wide" as const,
   },
+  { 
+    name: "IAPSER", 
+    logo: "/logos/organizadores/Iapser.png", 
+    placeholder: "Instituto Autárquico Provincial del Seguro",
+    width: "normal" as const,
+  },
+  { 
+    name: "MiradorTec", 
+    logo: "/images/mirador-tec.png", 
+    placeholder: "MiradorTec",
+    width: "normal" as const,
+  },
 ]
 
 const silverSponsors: { name: string; logo: string; placeholder: string; width?: "narrow" | "normal" | "wide" | "extra-wide" }[] = []

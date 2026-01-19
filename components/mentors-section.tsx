@@ -1,3 +1,5 @@
+"use client"
+
 import { MentorCard } from "./mentor-card"
 import { Gamepad2, Code2, Palette, Music } from "lucide-react"
 
@@ -7,14 +9,14 @@ const mentors = [
     role: "Game Designer",
     specialty: "Diseño de niveles",
     icon: Gamepad2,
-    contactLink: "#",
+    discordId: "163002286551859210",
   },
   {
-    name: "Nombre del Mentor",
+    name: "Juan Cruz Leiva",
     role: "Programador",
     specialty: "Unity / C#",
     icon: Code2,
-    contactLink: "#",
+    discordId: "286572944144990208",
   },
   {
     name: "Nombre del Mentor",
@@ -31,11 +33,12 @@ const mentors = [
     contactLink: "#",
   },
   {
-    name: "Nombre del Mentor",
+    name: "Leandro Gomez",
     role: "Sound Designer",
     specialty: "Audio para juegos",
     icon: Music,
-    contactLink: "#",
+    contactLink: "https://discord.gg/Kh6JDj44cE",
+    contactLabel: "Mentorias por Discord",
   }
 ]
 
@@ -48,7 +51,7 @@ export function MentorsSection() {
             <span className="text-secondary">Mentores</span> <span className="text-foreground">del Evento</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Profesionales de la industria que te guiarán durante las 48 horas de desarrollo. Consultá cualquier duda
+            Profesionales de la industria que te guiarán durante el evento. Consultá cualquier duda
             sobre diseño, programación, arte o audio.
           </p>
         </div>
